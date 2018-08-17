@@ -1,62 +1,45 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <!-- import CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <style>
-        .item {
-            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .15);
-            margin-bottom: 16px;
-            padding: 10px;
-            background: #fff;
-            height: 100px;
-            width: 60%;
-        }
-
-        .grid-content {
-            border-radius: 4px;
-            min-height: 36px;
-            background: rgb(96, 140, 223);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <style>
+    .grid-content {
+      border-radius: 4px;
+      min-height: 36px;
+    }
+    .bg-purple-dark{
+      background: #3e84e6;
+    }
+    .bg-purple{
+      background: #99a9bf;
+    }
+    .bg-purple-light{
+      background: #6689b9;
+    }
+  </style>
 </head>
-
 <body>
-    <div id="app">
-        <el-tabs v-model="activeName" @tab-click="handleClick">
-            <el-tab-pane label="首页" name="first">
-                <img height="100%" width="100%" src="https://img.tapimg.com/market/images/176bad03a542630fd8bc9e0202e6ac7b.jpg?imageMogr2/auto-orient/thumbnail/2080x/strip/gravity/Center/crop/2080x828/format/jpg/quality/80/interlace/1"
-                />
-            </el-tab-pane>
-            <el-tab-pane label="排行榜" name="second">
-                <div class="item">
-                    <el-row>
-                        <el-col :span="8">
-                            <div class="grid-content bg-purple-dark">1</div>
-                        </el-col>
-                        <el-col :span="16">
-                            <div class="grid-content bg-purple-dark">1</div>
-                        </el-col>
-                    </el-row>
-                </div>
-            </el-tab-pane>
-            <el-tab-pane label="用户中心" name="third">用户中心</el-tab-pane>
-        </el-tabs>
-    </div>
+  <div id="app">
+    <el-row>
+      <el-col :span="24"><div class="grid-content bg-purple-dark">1</div></el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="12"><div class="grid-content bg-purple">1</div></el-col>
+      <el-col :span="12"><div class="grid-content bg-purple-light">1</div></el-col>
+    </el-row>
+  </div>
 </body>
-<!-- import Vue before Element -->
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-<!-- import JavaScript -->
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-<script>
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script>
     new Vue({
-        el: '#app',
-        data: function () {
-            return { visible: false }
-        }
+      el: '#app',
+      data: function() {
+        return { visible: false }
+      }
     })
-</script>
-
+  </script>
 </html>
