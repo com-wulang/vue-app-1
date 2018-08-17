@@ -12,13 +12,15 @@
             padding: 10px;
             background: #fff;
             height: 100px;
-            width: 60%;
+            width: 40%;
         }
 
         .grid-content {
             border-radius: 4px;
-            min-height: 36px;
-            background: rgb(96, 140, 223);
+            min-height: 90px;
+        }
+        .game-name{
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -33,11 +35,14 @@
             <el-tab-pane label="排行榜" name="second">
                 <div class="item">
                     <el-row>
-                        <el-col :span="8">
-                            <div class="grid-content bg-purple-dark">1</div>
+                        <el-col :span="3" class="item-son">
+                            <img height="80px" width="80px" src="https://img.tapimg.com/market/icons/d9ba6610194b126038667688db485fd4_360.png?imageMogr2/auto-orient/strip">
                         </el-col>
-                        <el-col :span="16">
-                            <div class="grid-content bg-purple-dark">1</div>
+                        <el-col :span="21" class="item-son">
+                            <h4 class="game-name">300大作战</h3>
+                            <div class="grid-content bg-purple-dark">
+                                <el-rate show-score v-model="value1"></el-rate>
+                            </div>
                         </el-col>
                     </el-row>
                 </div>
@@ -54,7 +59,10 @@
     new Vue({
         el: '#app',
         data: function () {
-            return { visible: false }
+            return { 
+                visible: false,
+                value1:8.2
+            }
         }
     })
 </script>
